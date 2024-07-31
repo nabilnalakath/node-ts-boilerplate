@@ -15,8 +15,8 @@ This README provides a comprehensive guide to setting up, running, and maintaini
 Clone the repository to your local machine using the following command:
 
 ```sh
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/nabilnalakath/node-ts-boilerplate.git
+cd node-ts-boilerplate
 ```
 
 ### Setting Up the Project
@@ -29,12 +29,7 @@ cd your-repo-name
 2. **Create environment configuration:**
    Create a `.env` file in the root of your project and add the necessary environment variables:
 
-   ```env
-   PORT=4000
-   MONGODB_URL=mongodb://localhost:27017/mydatabase
-   ```
-
-   Also, create a `.env.example` file for reference:
+   You can use the `.env.example` file for reference:
 
    ```env
    PORT=4000
@@ -115,7 +110,7 @@ There are two ways to run the server: with or without the database connection.
    pnpm serve-docs
    ```
 
-   Open the URL provided by `http-server` (e.g., `http://localhost:4000`) in your browser to view the documentation.
+   Open the URL provided by `http-server` (e.g., `http://localhost:4005`) in your browser to view the documentation.
 
 ### Adding TypeDoc Comments
 

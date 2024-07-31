@@ -12,7 +12,7 @@
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
     "prepare": "husky",
     "prepare-docs": "typedoc",
-    "serve-docs": "http-server docs -p ${PORT:-3000}"
+    "serve-docs": "http-server docs -p ${PORT:-4005}"
   },
   "keywords": [],
   "author": "",
