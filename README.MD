@@ -33,7 +33,6 @@ cd node-ts-boilerplate
 
    ```env
    PORT=4000
-   MONGODB_URL=mongodb://localhost:27017/mydatabase
    ```
 
 ### Project Structure
@@ -45,8 +44,6 @@ my-node-project/
 ├── docs/
 ├── node_modules/
 ├── src/
-│   ├── config/
-│   │   └── database.ts
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
@@ -68,21 +65,7 @@ my-node-project/
 
 There are two ways to run the server: with or without the database connection.
 
-1. **Run the server with database connection:**
-
-   Uncomment the following line in `src/index.ts`:
-
-   ```typescript
-   startServerWithDB();
-   ```
-
-   Then, start the server:
-
-   ```sh
-   pnpm dev
-   ```
-
-2. **Run the server without database connection:**
+**Run the server without database connection:**
 
    Uncomment the following line in `src/index.ts`:
 
@@ -118,16 +101,14 @@ TypeDoc comments are essential for generating comprehensive documentation. Add c
 
 ```typescript
 /**
- * Connect to the MongoDB database.
- * 
- * @async
- * @function connectDB
- * @returns {Promise<void>} A promise that resolves when the connection is established.
- * @throws {Error} Throws an error if the connection fails.
+ * Calculates the square root of a number.
+ *
+ * @param x the number to calculate the root of.
+ * @returns the square root if `x` is non-negative or `NaN` if `x` is negative.
  */
-const connectDB = async (): Promise<void> => {
-  // function implementation
-};
+export function sqrt(x: number): number {
+    return Math.sqrt(x);
+}
 ```
 
 ### Testing the API
@@ -164,4 +145,4 @@ To modify environment variables, update your `.env` file with the desired values
 
 ### Conclusion
 
-This README should help you set up, run, and maintain your project efficiently. Follow the steps carefully, and refer back to this document as needed for any setup or configuration tasks. Happy coding!
+This README should help you set up, run, and maintain your project efficiently. Follow the steps carefully, and refer back to this document as needed for any setup or configuration tasks!
