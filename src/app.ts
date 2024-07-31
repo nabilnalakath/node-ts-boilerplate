@@ -1,8 +1,8 @@
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
-import swaggerJsdoc from 'swagger-jsdoc';
 import routes from './routes';
 import dotenv from 'dotenv';
+import * as swaggerDocument from '../swagger.json';
 
 // Load environment variables
 dotenv.config();
@@ -10,20 +10,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;
 
-const swaggerOptions = {
-  swaggerDefinition: {
-    openapi: '3.0.0',
-    info: {
-      title: 'My API',
-      version: '1.0.0',
-      description: 'API Documentation',
-    },
-  },
-  apis: ['./src/routes/*.ts'],
-};
-
-const swaggerDocs = swaggerJsdoc(swaggerOptions);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /**
  * Middleware to parse JSON.

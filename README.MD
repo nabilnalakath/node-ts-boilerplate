@@ -44,6 +44,8 @@ my-node-project/
 ├── docs/
 ├── node_modules/
 ├── src/
+│   ├── config/
+│   │   └── database.ts
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
@@ -58,7 +60,8 @@ my-node-project/
 │   └── pre-commit
 ├── package.json
 ├── tsconfig.json
-└── typedoc.json
+├── typedoc.json
+└── swagger.json
 ```
 
 ### Running the Server

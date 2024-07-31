@@ -7,7 +7,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "resolveJsonModule": true,  // import json modules
+    "allowSyntheticDefaultImports": true  // Handle default imports
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
